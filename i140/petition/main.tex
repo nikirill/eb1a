@@ -1,0 +1,136 @@
+\documentclass{article}
+
+\usepackage[english]{babel}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=false, allcolors=blue, hidelinks]{hyperref}
+\usepackage[compress]{cite}
+\usepackage[final]{pdfpages}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage[shortlabels]{enumitem}
+\usepackage{lastpage}
+\usepackage{xspace}
+\usepackage{ulem}
+\usepackage[capitalize]{cleveref}
+\usepackage{dirtytalk}
+\usepackage{titling} % multiple titles
+\usepackage{changepage}
+\usepackage{ifthen}
+
+
+\makeatletter
+\renewcommand\@bibitem[1]{\item\if@filesw \immediate\write\@auxout
+	{\string\bibcite{#1}{Exhibit \the\value{\@listctr}}}\fi\ignorespaces}% 
+	%<------------
+\def\@biblabel#1{Exhibit #1:}% <-------------------
+\makeatother
+
+\makeatletter
+\newcommand{\citewb}[1]{%
+  \@ifundefined{b@#1}{%
+    ??%
+  }{%
+    \csname b@#1\endcsname%
+  }%
+}
+\makeatother
+
+\onehalfspacing
+\setlength{\parskip}{0.5\baselineskip}%
+\setlength{\parindent}{0pt}%
+
+\renewcommand{\headrulewidth}{.0mm} % header line width
+
+\widowpenalty=10000
+\clubpenalty=10000
+
+\newenvironment{narrowtext}{%
+  \begin{adjustwidth}{2em}{2em}%
+}{%
+  \end{adjustwidth}%
+}
+
+\newcommand{\qu}[2][]{%
+  \begin{narrowtext}
+    \say{\textit{#2}}%
+    \ifthenelse{\equal{#1}{}}{}{ (#1)}%
+  \end{narrowtext}%
+}
+
+\newcommand{\quin}[2][]{%
+    \say{\textit{#2}}%
+    \ifthenelse{\equal{#1}{}}{}{ (#1)}%
+}
+
+\newcommand{\drfull}{Dr.~Kirill Nikitin\xspace}
+\newcommand{\drfulls}{Dr.~Kirill Nikitin's\xspace}
+\newcommand{\dr}{Dr.~Nikitin\xspace}
+\newcommand{\drs}{Dr.~Nikitin's\xspace}
+
+\newcommand{\aaa}{Dr.~AA\xspace}
+\newcommand{\bbb}{Dr.~BB\xspace}
+\newcommand{\ccc}{Dr.~CC\xspace}
+\newcommand{\ddd}{Dr.~DD\xspace}
+\newcommand{\eee}{Dr.~EE\xspace}
+\newcommand{\fff}{Dr.~FF\xspace}
+\newcommand{\ggg}{Dr.~GG\xspace}
+\newcommand{\jjj}{Dr.~JJ\xspace}
+
+\newcommand{\epfl}{the \'Ecole Polytechnique F\'ed\'erale de Lausanne, Switzerland\xspace}
+\newcommand{\kth}{KTH Royal Institute of Technology, Sweden\xspace}
+\newcommand{\reduni}{Red University\xspace}
+\newcommand{\blueuni}{Blue University\xspace}
+\newcommand{\yellowuni}{Yellow University\xspace}
+\newcommand{\whiteuni}{White University\xspace}
+\newcommand{\cyanuni}{Cyan University\xspace}
+\newcommand{\violetinc}{Violet Inc.\@\xspace} 
+\newcommand{\purpleinc}{Purple Inc.\@\xspace} 
+
+
+
+\renewcommand{\paragraph}[1]{\medskip\noindent\textbf{#1}}
+\newcommand{\itpara}[1]{\smallskip\noindent\emph{#1}}
+\newcommand{\sparagraph}[1]{\smallskip\noindent\textbf{#1}}
+\newcommand{\hparagraph}[1]{\medskip\noindent\textbf{#1}\\[0.3em]}
+\newcommand{\iparagraph}[1]{\medskip\noindent\textbf{\textit{#1}}\\[0.3em]}
+
+% Common abbreviations
+\newcommand{\ie}{{i.e.}\xspace}
+\newcommand{\eg}{{e.g.}\xspace}
+\newcommand{\etal}{et al.\@\xspace}
+
+\hyphenation{ZDNET CyberScoop}
+
+\newcommand{\padme}{Padm{\'e}\xspace}
+\newcommand*{\dpcs}{Data Privacy and Computer Security\xspace}
+\newcommand*{\numreviews}{68\xspace}
+\newcommand*{\numcitations}{333+\xspace}
+\newcommand*{\numletters}{eight\xspace}
+
+\newcommand{\ip}[1]{\includepdf[pages=-]{#1}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhfoffset[L]{1cm} % left extra length
+\fancyhfoffset[R]{1cm} % right extra length
+\renewcommand{\headrulewidth}{1pt}
+\lhead{EB-1A Permanent Residence Petition for \drfull}
+\rfoot{Page \thepage ~of \pageref*{LastPage}}
+
+
+\begin{document}
+	\input{contents}
+	\input{intro}
+	\input{summary}
+	\input{ability}
+	\input{benefit}
+	\input{merits}
+	\input{conclusion}
+	\input{plans}
+	
+	\newpage
+	\input{exhibits}
+\end{document}

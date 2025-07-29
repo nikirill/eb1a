@@ -1,0 +1,88 @@
+\documentclass{article}
+
+\usepackage[english]{babel}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=false, allcolors=blue, hidelinks]{hyperref}
+\usepackage[compress]{cite}
+\usepackage[final]{pdfpages}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage[shortlabels]{enumitem}
+\usepackage{lastpage}
+\usepackage{xspace}
+\usepackage{ulem}
+\usepackage[capitalize]{cleveref}
+\usepackage{dirtytalk}
+\usepackage{titling} % multiple titles
+\usepackage{changepage}
+\usepackage{ifthen}
+
+
+\makeatletter
+\renewcommand\@bibitem[1]{\item\if@filesw \immediate\write\@auxout
+	{\string\bibcite{#1}{Exhibit \the\value{\@listctr}}}\fi\ignorespaces}% 
+	%<------------
+\def\@biblabel#1{Exhibit #1:}% <-------------------
+\makeatother
+
+\makeatletter
+\newcommand{\citewb}[1]{%
+  \@ifundefined{b@#1}{%
+    ??%
+  }{%
+    \csname b@#1\endcsname%
+  }%
+}
+\makeatother
+
+\onehalfspacing
+\setlength{\parskip}{0.5\baselineskip}%
+\setlength{\parindent}{0pt}%
+
+\renewcommand{\headrulewidth}{.0mm} % header line width
+
+\widowpenalty=10000
+\clubpenalty=10000
+
+
+
+\newcommand{\drfull}{Dr.~Kirill Nikitin\xspace}
+\newcommand{\drfulls}{Dr.~Kirill Nikitin's\xspace}
+\newcommand{\dr}{Dr.~Nikitin\xspace}
+\newcommand{\drs}{Dr.~Nikitin's\xspace}
+
+\newcommand{\epfl}{the \'Ecole Polytechnique F\'ed\'erale de Lausanne, Switzerland\xspace}
+\newcommand{\kth}{KTH Royal Institute of Technology, Sweden\xspace}
+
+
+
+\renewcommand{\paragraph}[1]{\medskip\noindent\textbf{#1}}
+\newcommand{\itpara}[1]{\smallskip\noindent\emph{#1}}
+\newcommand{\sparagraph}[1]{\smallskip\noindent\textbf{#1}}
+\newcommand{\hparagraph}[1]{\medskip\noindent\textbf{#1}\\[0.3em]}
+\newcommand{\iparagraph}[1]{\medskip\noindent\textbf{\textit{#1}}\\[0.3em]}
+
+% Common abbreviations
+\newcommand{\ie}{{i.e.}\xspace}
+\newcommand{\eg}{{e.g.}\xspace}
+\newcommand{\etal}{et al.\@\xspace}
+
+\hyphenation{ZDNET CyberScoop}
+
+\newcommand*{\dpcs}{Data Privacy and Computer Security\xspace}
+
+\newcommand{\ip}[1]{\includepdf[pages=-]{#1}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhfoffset[L]{1cm} % left extra length
+\fancyhfoffset[R]{1cm} % right extra length
+\rfoot{Page \thepage ~of \pageref*{LastPage}}
+
+
+\begin{document}
+	\input{cover}
+\end{document}

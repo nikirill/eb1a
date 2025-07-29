@@ -1,0 +1,457 @@
+%!TEX root = ./main.tex
+\subsection{Evidence of \drs original scientific and scholarly contributions 
+	of major significance to the field}
+\label{sec:contributions}
+
+The Beneficiary's field of specialization is \dpcs, which involves researching
+methods for protecting secrecy of data and communication.
+\drs particular expertise is in designing techniques for protecting metadata and
+integrity in encrypted files and communication.
+
+Metadata are auxiliary information, such as the data recipients or the
+communicating parties, the algorithms used for encryption, and the length of the
+encrypted data. 
+Protection of metadata is crucial for ensuring the data and users' privacy.
+In 2023, the U.S. government published the \textit{\uline{Executive Order on the
+Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence}},
+which emphasized the importance of developing privacy-enhancing technologies
+\textit{``to protect privacy and to combat the broader legal and societal risks
+that result from the improper collection and use of people’s data.''}
+Consequently, the National Science and Technology Council developed
+\textit{\uline{National Strategy to Advance Privacy-Preserving Data Sharing
+and Analytics, 2023}} and \textit{\uline{National Privacy Research Strategy,
+2025}} (see \citewb{government} for the executive order and the strategy
+reports).
+\drs work is directly aligned with the goals of the National Strategy,
+specifically, in its recommendation to develop tools and techniques for
+protecting privacy-sensitive information in transit and at rest.
+
+Data integrity is the assurance that the data has not been tampered with during
+transit to a user or when stored on a server.
+In his research, \dr developed methods for ensuring data integrity in
+software-update systems, which represent the so-called \textit{software
+supply-chain}, and in systems for private information retrieval.
+The software supply chain is a sequence of steps that a software package goes
+through from the initial development to the final deployment on a user's device.
+In 2022, in response to the \textit{\uline{Executive Order on America's Supply
+Chains}} and the \textit{\uline{Executive Order on Improving the Nation’s
+Cybersecurity}}, the Action Plan on Securing Defense-Critical Supply Chains was
+developed~\cite{government}.
+This directive highlighted the growing risks posed by vulnerabilities in the
+software supply chain, such as the insertion of malicious code or unauthorized
+modifications to software during its distribution. 
+\drs methods address these challenges by introducing robust cryptographic
+techniques and blockchain algorithms to verify the authenticity and integrity of
+software updates, ensuring that only verified code reaches end users.
+These advancements provide means for fortifying critical infrastructure and
+safeguarding sensitive systems against evolving cyber threats.
+
+\drs major scientific contributions have been recognized by \textit{experts in
+the field worldwide}.
+We discuss these contributions in greater detail below.
+
+\subsubsection{Evidence of original scientific contribution: Methods for 
+protecting metadata in encrypted data and communications}
+\label{sec:purbs}
+
+\dr invented methods for efficient
+protection of metadata in encrypted data and communications, which he
+presented at the Privacy Enhancing Technologies Symposium and published in the
+corresponding proceedings~\cite{purbs}.
+When a message is encrypted in storage or sent over an encrypted network
+channel, it is commonly supplemented with unprotected auxiliary information,
+called \textit{metadata}, which can specify the message's recipient, the
+encryption parameters, or the message's length.
+It is added to facilitate the message's decryption by the recipient, who,
+otherwise, would not know what cryptographic key to use or how to interpret the
+ciphertext.
+These metadata, however, can be used to infer sensitive information about the
+message or the communicating parties, which poses a threat to the users'
+privacy.
+The techniques invented by \dr facilitate encryption of data that protects
+both the content and the metadata, and the recipient still can
+efficiently decrypt such a zero-leakage ciphertext.
+These methods have been recognized by both the scientific community and
+large technological companies as a contribution that solves a
+long-standing challenge.
+
+\textbf{\uline{The method for obfuscating the size of encrypted data,
+developed by \dr, is already being used by iMessage and Facebook Messenger.}}
+Starting with iOS 17.3, iMessage (an instant messaging service developed by
+Apple Inc.\@) uses \padme, the padding heuristics developed
+by \dr, as a part of the metadata-protection methods, to protect the length of
+messages in transit between iMessage users.
+Apple specifically chose \padme as it \textit{``strikes an excellent
+balance between privacy and efficiency, and preserves the user experience in
+limited device connectivity scenarios''} (\textbf{see the announcement by the
+Apple Security Engineering and Architecture team, which describes the usage of
+\drs invention}~\cite{purbs}).
+Furthermore, Facebook Messenger (an instant messaging service developed by Meta
+Platforms) uses the same invention of \dr to protect the messages in encrypted
+storage, as outlined by the Labyrinth protocol that specifies the encryption of
+messages history on the devices of each user's account (\textbf{see the
+announcement by Facebook Engineering and the protocol documentation that details
+the usage}~\cite{purbs}).
+iMessage and Messenger are reported to have over 1.3 and 1 billion
+active users each month, respectively (see \citewb{purbs} for evidence of
+iMessage and Facebook Messenger's active users' count).
+
+\textbf{\uline{Independent}} expert \jjj, XX at \violetinc, describes the
+reasons for adopting \drs work in his letter of support enclosed at
+\citewb{letter-jjj} as follows:
+
+\qu{\ldots}
+
+\textbf{\uline{Independent}} expert \ggg, XX at \violetinc, who is a Program
+Committee member of the conference where the original publication on \drs work
+was presented, elaborates on \drs original contribution in his
+letter of support enclosed at \citewb{letter-ggg}:
+
+\qu{\dots}
+
+\bbb, XX at \reduni, a leading expert in privacy-enhancing technologies, describes the
+significance of \drs work from the scientific perspective (see \citewb{letter-bbb}):
+
+\qu{\textbf{Dr. Nikitin's work on reducing metadata leakage from encrypted files
+and communications is one of his most influential contributions}.
+Dr. Nikitin studied a fundamental problem in the existing encryption schemes:
+standard formats for encrypted data (aka ciphertexts) expose auxiliary
+information (aka metadata), including encryption suites used and payload length.
+This exposure can be exploited by traffic analysis, de-anonymization, website
+fingerprinting, and many other attacks, and has thus been a focus of much
+research in the security and privacy community. 
+Instead of the previous, fragile approaches that aimed to distinguish between 
+sensitive and not-sensitive metadata, \textbf{Dr. Nikitin proposed a radical
+innovation of leaving no unencrypted metadata whatsoever in the ciphertexts. 
+While ideal from the privacy perspective, this approach faced serious
+efficiency challenges because recipients of encrypted data would not know what
+algorithm or cryptographic key to use to decrypt it.
+To address this challenge, Dr. Nikitin invented a new way of handling
+decryption.}
+He proposed decoding techniques that enable a ciphertext recipient
+to, first, efficiently find and decrypt the auxiliary markers, then decrypt the
+data. 
+\textbf{This innovation has made it significantly more difficult for adversaries
+to perform traffic analysis or infer sensitive information from encrypted data
+at rest, greatly improving protection for sensitive files and communications.}}
+
+\textbf{\uline{Independent}} expert \eee, XX at \purpleinc, and YY at \cyanuni, and a recognized
+leader in cryptography and privacy-enhancing technologies, describes the impact
+of \drs work from the industrial perspective in his letter of support enclosed
+at \citewb{letter-eee}, stating:
+
+\qu{Dr. Nikitin's innovation in iMessage is a technique for obfuscating the
+length of encrypted data. Most encryption algorithms nowadays preserve the
+length of data when encrypting it. 
+For example, the word ``yes'' would commonly be encrypted with three symbols,
+whereas the word ``no'' with two symbols. 
+This is obviously a privacy issue in the messaging context because, even when
+encrypted, the two words would be easily distinguishable. 
+Dr. Nikitin proposed a padding technique that struck the optimal balance between
+the size protection and the induced bandwidth overhead. 
+\textbf{Minimizing the overhead while providing the best possible protection is
+critical, as a system like iMessage might be exchanging billions of messages
+every day. 
+The fact that Dr. Nikitin's innovation provides this balance and that it is
+directly translated into deployment by a major technology company underscores
+the real-world impact of his work and its importance in securing communications
+at scale.}}
+
+Further highlighting the impact of \drs contributions, expert
+\textbf{\uline{independent}} letter of support from \fff, XX at \whiteuni, and a renown researcher in security and privacy of
+large-scale distributed computer systems states (see \citewb{letter-fff}):
+
+\qu{Kirill is known for his scientific contributions in data privacy and,
+specifically, for his work on metadata protection.
+\textbf{In his paper titled ``Reducing metadata leakage from encrypted files and
+communication with PURBs'', published in the Proceedings on Privacy
+Enhancing Technologies, Kirill presented techniques for both obfuscating the
+length of encrypted content and protecting encryption metadata. 
+This work is important as the length of an encrypted payload can reveal
+important information about content; yet protecting it in an efficient way is a
+non-trivial task because digital objects can radically differ in size.}
+\medskip \\
+For example, one user might send a short email of less than 1000 characters in
+length, while another user may wish to download a high-definition movie one
+million times larger than the email.
+It is grossly inefficient, and therefore impractical, to require all
+communications to be of the same length.
+In this paper Kirill developed padding techniques which ensure messages
+conform to a small set of lengths which maximize privacy while ensuring
+practicality.
+The technique has been adopted by several major tech companies including Apple and Meta.
+\medskip \\
+One line of my own research work concerns anonymity networks.
+Such networks allow users to communicate without revealing the identities of the
+communicating parties to the network operator.
+As a result, these networks require cryptographic methods and system engineering
+designs which do not expose the identities of either the sender or the receiver.
+Such systems have traditionally focused on direct, one-to-one communication.
+\textbf{Kirill has developed techniques which can encrypt a message which is
+readable by multiple recipients without revealing who those recipients are.
+This approach is therefore more scalable, opening up new opportunities in future applications.}}
+
+
+\subsubsection{Evidence of original scientific contribution: Novel techniques for private information retrieval}
+\label{sec:apir}
+
+Private information retrieval (PIR) is a paradigm in which a user can
+download data from a server without revealing which data are being retrieved.
+PIR is one of the highlighted research areas in \uline{The National Strategy to
+Advance Privacy-Preserving Data Sharing and Analytics} (see page 18 of the
+strategy report enclosed at \citewb{government}).
+\drs work is the first to develop a solution to the setting where the
+server is fully malicious, \ie, the server can arbitrarily deviate from the
+correct behavior, hereby violating the user's privacy.
+\textbf{This advancement brings the PIR technology closer to practical
+deployment in real-world systems.}
+The developed techniques were published in the proceedings of the USENIX
+Security Symposium~\cite{apir}, one of the top conferences in the field, and
+were immediately recognized by the scientific community.
+The manuscript has been cited over 30 times in the first year after its
+publication and has spurred a series of follow-up works. 
+Here is a quote from one of the follow-up works, published in another major
+conference of the field, that builds on top of \drs contributions:
+
+\qu[Dietz, M., Tessaro, S. Fully malicious authenticated PIR. In Annual
+International Cryptology Conference 2024.]{Only very recently,
+[Colombo, \uline{Nikitin} \etal] initiated the study
+of selective-failure attacks in the context of PIR.}
+
+
+\textbf{\uline{Independent}} expert \ccc, XX at \blueuni, and an expert in
+secure computation, blockchain, and privacy-enhancing technologies, explains the
+significance of \drs work on PIR (see \citewb{letter-ccc} for the full letter):
+
+\qu{Dr. Nikitin has made significant, original contributions to the
+field of data and computer privacy, particularly through his research on Private
+Information Retrieval (PIR). 
+PIR enables users to retrieve data from a computer database without revealing
+what data they are accessing. \textbf{This technology is crucial for improving
+the privacy guarantees of online communication, for example, in instant
+messaging applications, such as WhatsApp.}
+Previously, research in PIR assumed that database servers always followed the
+protocol perfectly.
+In real-world applications, however, a corrupted or compromised server can
+violate the protocol and attempt to break the user's privacy. Dr. Nikitin has
+demonstrated that such a server can alter its response to a user's query, ob-
+serve whether the user accepts this response, and, subsequently, infer what data
+have been accessed. \textbf{Dr. Nikitin's proposed schemes are the first
+efficient solution to ensure the privacy of information retrieval even when the
+database server is malicious. This achievement bridges the gap between
+theoretical PIR protocols and their practical security in real-world
+scenarios.}}
+
+\textbf{\uline{Independent}} expert \eee, XX at \purpleinc and YY at \cyanuni, states (see
+\citewb{letter-eee}):
+
+\qu{Dr. Nikitin's work on protecting user access patterns follows a long line of
+research on private information retrieval (PIR). PIR is a set of techniques for
+enabling a computer user to fetch an item from a database without revealing to
+the database which item it is. \textbf{While PIR has been extensively studied in
+academic settings, all the prior approaches have been unsuitable for real-world
+deployment due to being insecure in the adversarial setting. Dr. Nikitin's work
+is the first to demonstrate how to make such protocols secure even when the
+database operator actively attempts to break the user's privacy.} These security
+properties are crucial in applications requiring strong guarantees, such as
+secure cloud storage and privacy-preserving search. \textbf{Dr. Nikitin's
+contributions bring the PIR technology significantly closer to practical
+deployment, enabling robust privacy protections in real-world systems.}}
+
+\subsubsection{Evidence of original scientific contribution: Securing software-update systems}
+\label{sec:chainiac}
+
+As highlighted by the \emph{Executive Order on America's Supply Chains}, the
+\emph{Executive Order on Improving the Nation’s Cybersecurity}, and the
+\emph{Action Plan on Securing Defense-Critical Supply Chains},
+software supply chains, and, specifically, software-update systems, are the
+critical component of the nation's infrastructure, and they are also a potential
+target for cyberattacks.
+\dr has developed CHAINIAC, a framework for securing software-update
+systems via decentralization and the application of blockchain technology.
+The framework was presented and published in the proceedings of the USENIX
+Security Symposium~\cite{chainiac}.
+The publication has gained significant attention in the scientific community and
+has already gathered impressive \textbf{185+ citations} by scientists
+across the world~(see the Google Scholar profile of \dr at \citewb{gscholar}).
+
+\textbf{\uline{Independent}} expert \ddd, XX at \yellowuni and a leading expert
+in verifiable computation and distributed systems, explains the national
+importance of \drs work for the United States (see \citewb{letter-ddd} for
+his letter of support):
+
+\qu{\textbf{Dr. Nikitin is one of the world experts in security of software-update systems, a research area of national importance to the United
+States. Without robust software update, adversaries can target the software
+supply chain. This has been demonstrated by recent attacks. 
+For example, government agencies were breached through SolarWinds's software.}
+The key point is that, unfortunately, software-update systems are a lucrative
+target for malicious actors because compromising a single access point can
+enable them to distribute malware to tens of thousands of companies and hundreds
+of millions of users. 
+\textbf{Failures in the software-update process can also lead to the disruption
+of critical services.
+For example, the CrowdStrike-related outage several months ago resulted in
+grounded flights, halted governmental services, and closed banks with the
+estimated worldwide financial damages of at least \$10 billion; it was caused by
+faulty software update. Hence, it is of paramount importance to design robust
+and secure mechanisms for the software supply chain.}
+\medskip \\
+\textbf{As a response to this critical challenge, Dr. Nikitin developed an
+innovative framework, named CHAINIAC, that was the first to leverage
+decentralization and transparency to eliminate single points of failure and to
+enforce integrity in the software-release pipeline.}
+At a high level, the framework secures each step of the software production
+process, from the development of the source code to the installation of the
+corresponding update on a user's device. 
+Among other techniques, the framework introduced the concepts of collectively
+verified builds and skipchains. Prior artifact-verifiability approaches provided
+the guarantee that a given source code could be deterministically compiled into
+some binary but did not establish any binding between the source code and the
+actual release delivered to user devices.
+CHAINIAC's innovation was to employ multiple servers that independently compiled
+a binary and then attested to a single valid release result that end users can
+trust. 
+By leveraging skipchains, a novel data structure that Dr. Nikitin designed,
+CHAINIAC implemented a public release log that deflected targeted attacks on
+high-profile individuals.
+\textbf{This work of Dr. Nikitin constituted a major contribution to the field
+and influenced the design of multiple follow-up architectures, including
+Google's Binary Transparency project.}}
+
+The innovation of \drs work is further explained by \aaa, XX at Black University, in his letter of support enclosed at
+\citewb{letter-aaa}:
+
+\qu{\ldots}
+
+\textbf{The final evidence of the significance of \drs work on securing the
+software supply chain is that \uline{it has been included in the curriculum of
+graduate-level courses at multiple universities in the United States and
+abroad}}.
+These universities are the University of Chicago, the University of
+California, San Diego, the University of Illinois at Urbana-Champaign, and the
+Technical University of Munich, Germany (see \citewb{chainiac} for copies of
+the curricula).
+
+
+\subsubsection{Evidence of original scientific contribution: Improving the efficiency of blockchain networks}
+\label{sec:blockchain}
+
+Blockchain is a novel technology that enables distributed parties to
+perform shared operations without the need for a trusted intermediary.
+Blockchain networks rely on this technology to implement crucial services, such
+as digital finance, supply chain management, and identity management.
+Scaling such networks to support a large number of users and a high volume of
+transactions, however, is a challenging task.
+The recent \uline{Executive Order on Strengthening American Leadership
+in Digital Financial Technology} highlighted the importance of the
+responsible growth and use of digital assets and blockchain technology for
+supporting innovation and economic development in the United States.
+
+\dr has made two major contributions to the field.
+In his work presented at the IEEE Symposium on Security and Privacy, \dr
+demonstrated how to drastically increase the throughout of blockchain networks
+by changing the approach to transaction verification (see the details in
+\citewb{blockchain}).
+\dr demonstrated that, instead of requiring all nodes in a network to
+verify each transaction, it would be more efficient to allow a single untrusted
+prover node to generate a cryptographic proof for the validity of multiple
+transactions and let the other nodes in the network verify that proof.
+It turned out to be much more efficient than the traditional approach and
+became the first ever instance of verifiable-computation techniques being used
+to improve the efficiency of a system.
+The second contribution of \dr was the design of novel data structure named
+skipchain.
+Unlike a blockchain that guarantees that only the past blocks are unchanged, a
+skipchain facilitates both backward and forward verification.
+Furthermore, this verification is significantly more efficient than in a regular
+blockchain due to the skipchain's structure.
+
+\textbf{\uline{Independent}} expert \ddd, XX at \yellowuni, explains the
+practical importance of \drs original contributions to blockchain research (see
+\citewb{letter-ddd}):
+
+\qu{Another influential work by Dr. Nikitin that I am closely familiar with
+showed how to improve the performance of Replicated State Machines (RSMs) by
+using outsourced verifiable computation. Dr. Nikitin demonstrated that, in a
+distributed system where multiple computer nodes executed the same operations,
+it could be more efficient for a single node to execute an operation, while
+generating a proof of correct execution, and to convince the other nodes of this
+correctness by letting them verify the proof. 
+\textbf{To achieve the required efficiency, Dr. Nikitin co-developed multiple
+complex cryptographic techniques to reduce the cost of proof generation and
+verification. This was a groundbreaking result because the research community 
+had previously considered outsourced verifiable computation to be a 
+high-overhead tool that inevitably caused efficiency decline.}
+The demonstration that this tool could, instead, improve efficiency was a 
+landmark advancement.%
+\medskip\\
+\textbf{The result above also had a profound practical impact. The modern
+example of RSMs are blockchains systems, a recent technology that has 
+applications in finance, governance, and regulation. Dr. Nikitin showed how his
+techniques could be applied to Ethereum, the second largest cryptocurrency and a
+platform with the market cap of \$400 billion. Concretely, his techniques could
+increase the throughput of the Ethereum network fivefold which would 
+translate in millions of dollars on saved transaction fees.} 
+Several cryptocurrency solutions later adopted and deployed this approach.
+Retaining researchers, such as Dr. Nikitin, with a deep expertise in new
+developing technologies is critical for the United States to maintain its
+position as the world technological leader.
+}
+
+\textbf{\uline{Independent}} expert \ccc, XX at \blueuni describes the key contributions of \drs work as follows (see \citewb{letter-ccc}):
+
+\qu{Dr. Nikitin has also advanced blockchain research by demonstrating how to
+integrate state-of-the-art verifiable outsourced computation into permissioned
+or permissionless blockchains.
+In essence, a blockchain achieves strong integrity protection through the
+redundant verification of all blocks and the transactions they contain by
+numerous---e.g., thousands or tens of thousands---of independent decentralized
+participants. 
+\textbf{The key idea of Piperine, the system that Dr. Nikitin and his
+collaborators from Microsoft Research designed, is to reduce this large
+redundant verification cost by allowing a single untrusted prover to produce a
+verifiable cryptographic proof of the correctness of a block of transactions and
+the many independent verifiers to merely verify these proofs, instead of the
+transactions themselves.}
+While simple in concept, the key technical challenges are in bridging
+the huge remaining efficiency gap between state-of-the-art outsourced
+computation and direct re-execution, as well as the many limitations and
+impedance mismatches between current outsourced computation methods and the
+requirements of the blockchain context. 
+\textbf{I believe that Piperine represents a major contribution both to
+blockchain and outsourced computation research, and it illustrates Dr. Nikitin's
+breadth and independent collaboration abilities in security/privacy research.}}
+
+Finally, \textbf{\uline{independent}} expert \fff, XX at \whiteuni
+explains how these contributions are representative of \drs expertise (see
+\citewb{letter-fff}):
+
+\qu{Dr. Nikitin has also made notable contributions in the field of blockchains
+--- immutable distributed datastores of information.
+In his paper titled ``Replicated state machines without replicated execution'',
+he demonstrates that the throughput of blockchain networks can be increased by
+using verifiable computation.
+Specifically, instead of replicating multiple transactions across many nodes, a
+blockchain node instead proves the correctness of their cumulative execution and
+sends this proof. 
+Using this approach, other nodes can verify the proof instead of redoing the
+computation, and it turns out this is faster.
+\textbf{This is a surprising result and demonstrates Kirill's expertise and
+creative thinking in this domain.}
+\medskip \\
+Another example can be found in his paper titled ``Chainiac: Proactive
+software-update transparency via collectively signed skipchains and verified
+builds''. 
+In this paper Kirill introduces the novel skipchain data structure. Unlike
+traditional blockchains, a skipchain facilitates verifiable forward traversal of
+blocks and more efficient backward traversal.
+\textbf{It is another example of an innovative creation which provides
+significant performance improvements, demonstrating that Kirill is a leading
+researcher in the field.}}
+
+As clearly outlined in the detailed discussion above, \dr has not only made
+original scientific contributions to the field of \dpcs, specializing in
+metadata protection, the security of software-update systems, and the efficiency
+of blockchain networks, but they have also been contributions of major
+significance, including their use by \textit{billions} of users, which exceeds
+the requirement for this criterion.
